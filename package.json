@@ -4,8 +4,8 @@
     "url": "https://github.com/pinax/pinax-project"
   },
   "scripts": {
-     "build": "./node_modules/.bin/webpack --config=static/webpack.config.js -p",
-     "watch": "./node_modules/.bin/webpack --config=static/webpack.config.js -w"
+    "build": "./node_modules/.bin/webpack --config=static/webpack.config.js -p",
+    "watch": "./node_modules/.bin/webpack --config=static/webpack.config.js -w"
   },
   "dependencies": {
     "babel-core": "^5.8.23",
