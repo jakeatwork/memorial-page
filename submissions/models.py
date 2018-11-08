@@ -41,7 +41,7 @@ class Link(models.Model):
         providers = micawber.bootstrap_basic()
         try:
             self.embed = providers.request(self.link)['html']
-        except micawber.ProviderException,e:
+        except micawber.ProviderException as e:
             self.embed = None
         super(Link,self).save(*args, **kwargs)
 

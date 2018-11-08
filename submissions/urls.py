@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 
-from views import submission, SubmissionListView, SubmissionUpdateView, ImageCreateView, delete_image
+from .views import submission, SubmissionListView, SubmissionUpdateView, ImageCreateView, delete_image
 from django.views.decorators.cache import cache_page
 
 

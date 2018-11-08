@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Submission, Image, Link
+from .models import Submission, Image, Link
 from django.core.exceptions import PermissionDenied
 from django_object_actions import DjangoObjectActions
 from django.contrib.admin import SimpleListFilter
