@@ -1,4 +1,4 @@
-Django==1.8.4
+Django==1.11
 pinax-theme-bootstrap==7.0.0
 django-user-accounts==1.2
 pinax-eventlog==1.0.0
@@ -12,4 +12,4 @@ micawber
 gunicorn
 psycopg2
 django-heroku
-django-s3direct
+cloudinary

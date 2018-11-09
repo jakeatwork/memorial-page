@@ -1,5 +1,6 @@
 import os
 import django_heroku
+import cloudinary
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
@@ -13,6 +14,13 @@ DATABASES = {
         'PORT': os.environ.get('MIMI_DATABASE_PORT', ''),
     }
 }
+
+cloudinary.config(
+    cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME', ''),
+    api_key = os.environ.get('CLOUDINARY_API_KEY', ''),
+    api_secret = os.environ.get('CLOUDINARY_API_SECRET', '')
+)
+
 DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -145,7 +153,7 @@ INSTALLED_APPS = [
     # project
     "submissions",
     "mysite",
-    "s3direct",
+    "cloudinary",
 ]
 
 # A sample logging configuration. The only tangible logging
