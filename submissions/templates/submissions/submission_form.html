@@ -55,9 +55,9 @@ Dropzone.options.dropzoneFiles['init'] = function() {
     this.options.thumbnail.call(this,file, '{{file.file.url}}');
     this.options.complete.call(this,file, file.upload.progress, file.upload.bytesSent);
     this.files.push(file);
-    cloudinary.uploader.upload('{{file.file.url}}')
   {% endfor %}
 }
+cloudinary.uploader.upload('{{file.file.url}}')
 </script>
 
 <div class="thecontent well">
