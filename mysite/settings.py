@@ -145,6 +145,7 @@ INSTALLED_APPS = [
     # project
     "submissions",
     "mysite",
+    "s3direct",
 ]
 
 # A sample logging configuration. The only tangible logging

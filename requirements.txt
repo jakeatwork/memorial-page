@@ -12,3 +12,4 @@ micawber
 gunicorn
 psycopg2
 django-heroku
+django-s3direct
