@@ -5,7 +5,6 @@ from django.views.decorators.cache import cache_page
 
 
 urlpatterns = [
-    "",
     url(r"^$", cache_page(60*15)(SubmissionListView.as_view()), name='home'),
     url(r"^submit/", submission, name='submit'),
     url(r"^edit/(?P<pk>[0-9]+)/$", SubmissionUpdateView.as_view(), name='submission-edit'),
