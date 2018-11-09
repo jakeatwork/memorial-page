@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 import micawber
+import cloudinary.uploader
 
 class Submission(models.Model):
     date = models.DateTimeField(auto_now_add=True)
@@ -29,6 +30,7 @@ class Submission(models.Model):
 class Image(models.Model):
     submission = models.ForeignKey(Submission)
     file = models.ImageField()
+    cloudinary.uploader.upload(file)
 
 class Link(models.Model):
     submission = models.ForeignKey(Submission)
