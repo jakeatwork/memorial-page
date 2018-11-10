@@ -73,17 +73,6 @@ Dropzone.options.dropzoneFiles['init'] = function() {
     <p>Entries are moderated, so it will be a while before they show up on the site</p>
   {% endif %}
   <hr />
-  <div class="row">
-    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-      <label>Pictures <small style="font-weight: normal">File size: up to 2MB</small></label>
-      <form action="{% url 'jfu-upload' pk=form.instance.pk %}" method="POST" class="dropzone" id="dropzone-files">
-        {% csrf_token %}
-        <div class="fallback">
-          <input name="file" type="file" multiple />
-        </div>
-      </form>
-    </div>
-  </div>
   <form method="POST">
     <div class="row">
       <div class="col-md-6" class="form-horizontal">
@@ -92,6 +81,7 @@ Dropzone.options.dropzoneFiles['init'] = function() {
       </div>
       <div class="col-xs-8 col-xs-offset-2 col-md-5 col-md-offset-1">
         <label>Links &amp; Videos</label>
+        <p>You can share links from flickr, instagram, imgur, youtube, vimeo, mobypicture, photobucket, smugmug, slideshare, soundcloud, twitter, etc...</p>
         {% for links_formset in inlines %}
           {{links_formset.management_form}}
           {% for inline in links_formset %}

@@ -4,6 +4,7 @@ require("bootstrap");
 
 require("../less/site.less");
 require("../images/person.png");
+require("../images/background.png");
 
 require("imports?define=>false!blueimp-file-upload");
 
