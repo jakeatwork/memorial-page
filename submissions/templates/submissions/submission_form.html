@@ -89,7 +89,6 @@ Dropzone.options.dropzoneFiles['init'] = function() {
       <div class="col-md-6" class="form-horizontal">
         {{form|bootstrap_horizontal}}
         {% csrf_token %}
-        {% cloudinary_direct_upload callback_url %}
       </div>
       <div class="col-xs-8 col-xs-offset-2 col-md-5 col-md-offset-1">
         <label>Links &amp; Videos</label>
