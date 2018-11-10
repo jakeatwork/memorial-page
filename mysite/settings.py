@@ -27,7 +27,7 @@ cloudinary.config(
     api_secret = os.environ.get('CLOUDINARY_API_SECRET', '')
 )
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1']
 
 
