@@ -1,5 +1,9 @@
 {% extends "site_base.html" %}
 
+{% load cloudinary %}
+{% cloudinary_includes %}
+{% cloudinary_js_config %}
+
 {% load staticfiles %}
 {% load bootstrap %}
 
@@ -55,7 +59,6 @@ Dropzone.options.dropzoneFiles['init'] = function() {
     this.files.push(file);
   {% endfor %}
 }
-{% load cloudinary %}
 cloudinary.uploader.upload('{{file.file.url}}')
 </script>
 
@@ -79,6 +82,7 @@ cloudinary.uploader.upload('{{file.file.url}}')
         <div class="fallback">
           <input name="file" type="file" multiple />
         </div>
+        {% cloudinary_direct_upload callback_url %}
       </form>
     </div>
   </div>

@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+pinax-theme-bootstrap = "==7.0.0"
+django-user-accounts = "==2.0.3"
+pinax-eventlog = "==2.0.3"
+django-jsonfield = "==0.9.15"
+django-bootstrap-form = "*"
+"django-markdown2" = "*"
+django-object-actions = "*"
+django-extra-views = "*"
+micawber = "*"
+gunicorn = "*"
+"psycopg2" = "*"
+django-heroku = "*"
+cloudinary = "*"
+Django = "==1.11"
+Pillow = "*"
+
+[requires]
+python_version = "3.6"

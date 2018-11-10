@@ -1,7 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 import micawber
+import cloudinary
 import cloudinary.uploader
+import cloudinary.api
+from cloudinary.models import CloudinaryField
 
 class Submission(models.Model):
     date = models.DateTimeField(auto_now_add=True)

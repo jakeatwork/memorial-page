@@ -4,14 +4,20 @@ import cloudinary
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': os.environ.get('MIMI_DATABASE_NAME', ''),                      
+#         'USER': os.environ.get('MIMI_DATABASE_USER', ''),
+#         'PASSWORD': os.environ.get('MIMI_DATABASE_PASSWORD', ''),
+#         'HOST': os.environ.get('MIMI_DATABASE_NAME', ''),
+#         'PORT': os.environ.get('MIMI_DATABASE_PORT', ''),
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('MIMI_DATABASE_NAME', ''),                      
-        'USER': os.environ.get('MIMI_DATABASE_USER', ''),
-        'PASSWORD': os.environ.get('MIMI_DATABASE_PASSWORD', ''),
-        'HOST': os.environ.get('MIMI_DATABASE_NAME', ''),
-        'PORT': os.environ.get('MIMI_DATABASE_PORT', ''),
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "dev.db",
     }
 }
 
